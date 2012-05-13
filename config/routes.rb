@@ -1,3 +1,6 @@
 Gamedesign::Application.routes.draw do
-  root to: 'home#show'
+
+  resources :patterns, :except => :index
+
+  root to: 'patterns#index'
 end
