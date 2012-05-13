@@ -23,10 +23,10 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
   gem 'guard-rspec', '0.7.0'
   gem 'guard-spork'
   gem 'libnotify'
+  gem "rack-test", require: "rack/test"
   gem 'rb-inotify'
   gem 'rspec-rails'
   gem 'simplecov'
