@@ -14,6 +14,7 @@ guard 'rspec', :version => 2, :cli => '--color' do
   watch('spec/spec_helper.rb')  { "spec" }
 
   watch(%r{^app/(.+)\.rb$})                           { |m| "spec/#{m[1]}_spec.rb" }
+  watch(%r{^app/views/(.+)/.*\.html\.haml$})          { |m| "spec/controllers/#{m[1]}_controller_spec.rb" }
   watch(%r{^spec/support/(.+)\.rb$})                  { "spec" }
 end
 
